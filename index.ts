@@ -35,7 +35,7 @@ async function run() {
             content: [
               {
                 type: "text",
-                text: "Describe what you see in this image, only tell about what is depicted, do not provide an explanation. If you see text, citate it directly, do not explain in your own words. Respond in Russian.",
+                text: "Describe what you see in this image, only tell about what is depicted, do not provide an explanation. If you see text, citate it directly, do not explain in your own words. Respond in Russian. If text is in other language, then citate it and add a russian translation alongisde.",
               },
               {
                 type: "image_url",
