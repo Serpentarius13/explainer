@@ -4,7 +4,7 @@ ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
-RUN npm install
+RUN pnpm install
 COPY . .
-RUN npm run build
-CMD [ "npm", "run", "start" ]
+RUN pnpm run build
+CMD [ "pnpm", "run", "start" ]
