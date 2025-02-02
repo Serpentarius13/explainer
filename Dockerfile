@@ -1,8 +1,10 @@
 FROM node:20-alpine
-
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 WORKDIR /app
-COPY . .
-RUN ls
+COPY package.json pnpm-lock.yaml ./
 RUN npm install
+COPY . .
 RUN npm run build
 CMD [ "npm", "run", "start" ]
